@@ -24,3 +24,21 @@ Plot the 2D embeddings side by side and compare - which method shows clearer sep
 ### Stress Function Analysis
 For the non metric MDS on the Iris dataset, plot the stress value vs number of dimensions.  
 Why does stress decrease as dim increases..?
+
+## PPCA, ICA
+1. PPCA for img compression   
+Apply PPCA on MNIST (or CIFAR10) for dim reduction and compare recon quality with PCA.
+
+2. PPCA with missing data   
+Use PPCA to handle missing values in data:    
+    - create a synthetic datset and introduce 10% missing values at random.
+    - apply PPCA to estimate missing values during EM steps.
+    - compare imputed values with true values (compute error).
+      
+3. Blind source separation using ICA  
+Use ICA to separate mixed audio signals (cocktail party problem):
+    - download 2 audio files (eg. speech + music).
+    - create mixed signals by applying a random mixing matrix.
+    - apply FastICA algorithm to separate original sources.
+    - compare separated signals with original signals using correlation.
+    - plot waveforms before adn after ICA.
