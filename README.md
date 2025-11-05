@@ -25,3 +25,18 @@ Plot the 2D embeddings side by side and compare - which method shows clearer sep
 For the non metric MDS on the Iris dataset, plot the stress value vs number of dimensions.  
 Why does stress decrease as dim increases..?
 
+## PPCA, ICA - Cocktail Part Problem
+### PPCA
+Apply PPCA on MNIST (or CIFAR-10) for dimensionality reduction and compare 
+reconstruction quality with PCA.    
+Use PPCA to handle missing values in data:   
+  a. Create a synthetic dataset and introduce 10% missing values at random.   
+  b. Apply PPCA to estimate missing values during EM steps.   
+  c. Compare imputed values with true values (compute error).
+### ICA
+Use ICA to separate mixed audio signals (cocktail party problem):    
+  a. Download 2 audio files (e.g., speech + music).   
+  b. Create mixed signals by applying a random mixing matrix.  
+  c. Apply FastICA algorithm to separate original sources.    
+  d. Compare separated signals with original signals using correlation.   
+  e. Plot waveforms before and after ICA.
